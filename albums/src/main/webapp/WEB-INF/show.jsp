@@ -16,6 +16,13 @@
 <p>Band Name: ${albumDetails.bandName}</p>
 <p>Year: ${albumDetails.year}</p>
 <hr>
+<h3>Liked By</h3>
+<ul>
+<c:forEach items="${albumDetails.likers}" var="user">
+<li>${user.firstName} ${user.lastName}</li>
+</c:forEach>
+</ul>
+<hr>
 <h3>Track Listings</h3>
 <hr>
 <c:forEach items="${albumDetails.songs}" var="song">
